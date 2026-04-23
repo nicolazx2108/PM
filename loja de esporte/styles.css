@@ -1,0 +1,129 @@
+
+
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0f172a;
+    --secondary: #22c55e;
+    --light: #f1f5f9;
+    --dark: #020617;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: var(--primary);
+    color: rgb(247, 247, 247);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: rgb(235, 227, 227);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--secondary);
+}
+
+/* HERO */
+.hero {
+    background: url('https://via.placeholder.com/1200x400') center/cover;
+    color: rgb(19, 18, 18);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.btn {
+    background: var(--secondary);
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #16a34a;
+}
+
+/* DESTAQUES */
+.destaques {
+    display: flex;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .destaques {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
